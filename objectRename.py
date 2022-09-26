@@ -1,11 +1,3 @@
-"""
-Rename Tool
-
-A simple test script for me to learn Python for Maya. This tool goes over all non-hidden objects in the scene
-and renames them by adding a suffix. Mesh objects get _geo added, Joints get _jnt and finally groups get _grp
-additional suffixes can be added to the dictionary
-"""
-
 from maya import cmds
 
 SUFFIXES = {
@@ -21,11 +13,8 @@ DEFAULT_SUFFIX = "grp"
 def rename(selection=False):
     """
     Renames any object with correct suffix from the suffix dictionary
-    Args:
-        selection: If True, use the currently selected items
-
-    Returns:
-        List of all objects that the function was operated on
+    :param selection: If True, use the currently selected items
+    :return:List of all objects that the function was operated on
     """
 
     # selection equals all selected items
