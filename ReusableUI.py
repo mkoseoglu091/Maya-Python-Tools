@@ -4,6 +4,9 @@ from maya import cmds
 
 
 class BaseWindow(object):
+    """
+    A base window UI object, used as an abstract class.
+    """
     # static variable
     windowName = "BaseWindow"
 
@@ -29,6 +32,9 @@ class BaseWindow(object):
 
 
 class TweenerUI(BaseWindow):
+    """
+    Inherits from BaseWindow, an animation tweener UI object. Users can use the slider between two keyframes to tween
+    """
 
     windowName = "TweenerWindow"
 
@@ -47,6 +53,9 @@ class TweenerUI(BaseWindow):
 
 
 class GearUI(BaseWindow):
+    """
+    A UI component for the Gear creation and modification process. Inherits BaseWindow, and uses the gearClassCreator
+    """
 
     windowName = "GearWindow"
 

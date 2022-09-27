@@ -2,6 +2,9 @@ from maya import cmds
 
 
 def tween(percentage, obj=None, attrs=None, selection=True):
+    """
+    Takes a percentage from 0 to 100 between two keyframes to tween the animation
+    """
     # No object is given and no object is selected, function can't run
     if not obj and not selection:
         raise ValueError("No object given to tween")
@@ -55,35 +58,3 @@ def tween(percentage, obj=None, attrs=None, selection=True):
 
         # add the required keyframe
         cmds.setKeyframe(attrFull, time=currentTime, value=currentValue)
-
-
-class TweenWindow(object):
-    # static variable
-    windowName = "TweenerWindow"
-
-    def show(self):
-        # if window already exists, delete the previous one and create a new one
-        if cmds.window(self.windowName, query=True, exists=True):
-            cmds.deleteUI(self.windowName)
-
-        cmds.window(self.windowName)
-
-        self.buildUI()
-
-        cmds.showWindow()
-
-    def buildUI(self):
-        column = cmds.columnLayout()
-        cmds.text(label="Use the slider to set the tween amount")
-        row = cmds.rowLayout(numberOfColumns=2)
-        self.slider = cmds.floatSlider(min=0, max=100, value=50, step=1, changeCommand=tween)
-        cmds.button(label="Reset", command=self.reset)
-
-        cmds.setParent(column)
-        cmds.button(label="Close", command=self.close)
-
-    def close(self, *args):
-        cmds.deleteUI(self.windowName)
-
-    def reset(self, *args):
-        cmds.floatSlider(self.slider, edit=True, value=50)
