@@ -19,3 +19,6 @@ This tool is a UI component that lets users save selected components or the enti
 
 #### 5. Lighting manager
 A dockable UI tool that allows users to add any type of light, save and import lights, modify them by changing their color and intensity, and isolate any single light if needed.
+
+#### 6. Command Line Renamer
+Command Line tool that renames files found in the directory. User can specify in directory, out directory, whether they want the renamed items duplicated or simply renamed, or if they want to use regex
