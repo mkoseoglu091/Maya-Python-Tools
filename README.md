@@ -16,3 +16,6 @@ This tool is used to tween keyframes in Maya to create gradual motion. Simply se
 
 #### 4. Controller Library
 This tool is a UI component that lets users save selected components or the entire scene, shows the saved components, and lets the users import previously saved components into the scene.
+
+#### 5. Lighting manager
+A dockable UI tool that allows users to add any type of light, save and import lights, modify them by changing their color and intensity, and isolate any single light if needed.
