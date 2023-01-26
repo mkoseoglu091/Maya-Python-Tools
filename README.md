@@ -2,6 +2,7 @@
  Simple Python Tools for Maya
 
  I am making these in an effort to learn how Python is used within Maya.
+ I followed [this](https://www.udemy.com/course/python-for-maya/) Udemy course by **Dhruv Govil** which was very helpful.
 
 ## Tools
 
